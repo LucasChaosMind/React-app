@@ -1,10 +1,10 @@
-import {Home, ProductList, SingleProduct} from './pages';
+import {Home, ProductList, SingleProduct, Login} from './pages';
 
 
 const App = () => {
   return (
     <>
-      <SingleProduct/>
+      <Login/>
     </>
   );
 }
