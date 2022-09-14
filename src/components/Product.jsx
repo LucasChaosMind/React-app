@@ -11,12 +11,13 @@ const Container =styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    border: 2px solid rgba(255,255,255,1);
+    background: rgba(255,255,255,0.7);
     border-radius: 2px 8px;
-    background: linear-gradient(75deg, rgba(235,23,184,0.1357878151260504) 56%, rgba(10,173,207,0.11021358543417366) 100%);
     position: relative;
 `
 const Circle = styled.div`
-    widht: 200px;
+    width: 200px;
     height: 200px;
     border-radius: 50%;
     background-color: #fff;
@@ -34,7 +35,8 @@ const Info = styled.div`
     top: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.1));
+    
+    background: rgba(0,0,0,0.1);
     z-index: 3;
     display: flex;
     align-items: center;
@@ -55,12 +57,11 @@ const Icon = styled.div`
     justify-content: center;
     margin: 10px;
     border: 1px solid transparent;
-    transition: 1s ease;
+    cursor: pointer;
+    transition: 0.5s ease;
     &:hover{
         background-color: #e9f5f5;
-        transform: scale(1.1);
         color: #ff00ee;
-        border: 1px solid #ff00ee;
     }
 `
 const Product = ({item}) => {

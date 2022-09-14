@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import {Search, ShoppingCartOutlined} from '@material-ui/icons'
+import {Search, ShoppingCartOutlined , FavoriteBorderOutlined} from '@material-ui/icons'
 import {Badge} from '@material-ui/core'
 
 const Container = styled.div`
     height: 60px;
+    z-index: 10000;
 `
 const Wrapper = styled.div`
     height: 100%;
@@ -30,17 +31,21 @@ const Right = styled.div`
   display: flex;
   align-items: center;
   justify-content: flex-end;
-` 
-const Language = styled.span`
+`
+const HeartBit = styled.span`
   font-size: 14px;
+  color: #000;
   cursor: pointer;
+  transition: all 1s ease;
+  &:hover{
+    color: #ff00ee;
+  }
 `
 const SearchContainer = styled.div`
   display: flex;
   align-items: center;
   border: 1px solid lightgray;
   margin: 25px;
-  pading: 5px;
 `
 const Input = styled.input`
   border: none;
@@ -60,16 +65,16 @@ const Navebar = () => {
     <Container>
       <Wrapper>
           <Left>
-              <Language>
-                EN
-              </Language>
+              <HeartBit>
+                <FavoriteBorderOutlined/>
+              </HeartBit>
               <SearchContainer>
                 <Input/>
                 <Search style={{color: "#444", fontSize: 16}}/>
               </SearchContainer>
           </Left>
           <Center>
-              <Logo>Waycircle.</Logo>
+              <Logo>WayCycles</Logo>
           </Center>
           <Right>
               <MenuItem>Register</MenuItem>

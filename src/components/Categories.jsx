@@ -17,4 +17,4 @@ const Categories = () => {
     </Container>
   )
 }
-export default Categories;
+export default Categories

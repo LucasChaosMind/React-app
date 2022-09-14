@@ -8,10 +8,7 @@ const Container = styled.div`
   height: 70vh;
   border-radius: 0 5px;
   position: relative;
-  transition: 1s ease;
-  &:hover{
-    box-shadow: 2px 2px 8px #${props=> props.color};
-  }
+  transition: all 1s ease; 
 `
 const Image = styled.img`
   width: 100%;
@@ -30,9 +27,19 @@ const Info = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+  background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.3));
   border-radius: 0 5px;
+  transition: all 1s ease;
+
+  border-right: 2.5px solid transparent;
+  border-bottom: 2.5px solid transparent;
+  
+  &:hover{
+    border-right: 2.5px solid #ff00ee;
+    border-bottom: 2.5px solid #ff00ee;
+  }
 `
+
 const Title = styled.h1`
   color: #fff;
   margin-bottom: 20px;
@@ -49,9 +56,9 @@ const Button = styled.button`
   transition: 0.7s ease;
   cursor: pointer;
   &:hover{
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0,0,0,0.9);
   }
-` 
+`
 
 const CategoryItem = ({item}) => {
   return (

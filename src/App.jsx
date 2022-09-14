@@ -1,12 +1,12 @@
-import {Home} from './pages';
+import {Home, ProductList, SingleProduct} from './pages';
 
 
 const App = () => {
   return (
     <>
-      <Home/>
+      <SingleProduct/>
     </>
   );
 }
 
-export default App;
+export default App

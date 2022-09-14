@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import styled from 'styled-components'
-import {ArrowLeftOutlined, ArrowRightOutlined, Style} from '@material-ui/icons'
+import {ArrowLeftOutlined, ArrowRightOutlined} from '@material-ui/icons'
 import {sliderItems} from '../data'
 
 const Container = styled.div`
@@ -41,8 +41,7 @@ const Slide = styled.div`
   height: 100vh;
   display: flex;
   align-items: center;
-  background-color: #${props=> props.bg};
-   
+  background-color: #${props=> props.bg}; 
 `
 const ImgContainer = styled.div`
   height: 100%;
