@@ -1,10 +1,10 @@
-import {Home, ProductList, SingleProduct, Login, Register} from './pages';
+import {Home, ProductList, SingleProduct, Login, Register, Cart} from './pages';
 
 
 const App = () => {
   return (
     <>
-      <Login/>
+      <Cart/>
     </>
   );
 }
