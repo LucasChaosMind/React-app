@@ -1,4 +1,4 @@
-import {Home, ProductList, SingleProduct, Login} from './pages';
+import {Home, ProductList, SingleProduct, Login, Register} from './pages';
 
 
 const App = () => {
