@@ -15,6 +15,7 @@ const Top = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 50px;
 `
 const TopButton = styled.button`
   padding: 10px;
@@ -49,10 +50,6 @@ const TopText = styled.span`
 const Info = styled.div`
    flex: 3;
 `
-const Summary = styled.div`
-  flex: 1;
-  border: 1px solid #ff00ee;
-`
 const ProductSee = styled.div`
   display: flex;
   justify-content: space-between;
@@ -70,6 +67,7 @@ const PriceDetail = styled.div`
 `
 const Image = styled.img`
   width: 200px;
+  border-radius: 8px 2px;
 `
 
 const Details = styled.div`
@@ -88,10 +86,63 @@ const ProductColor = styled.div`
 `
 const ProductSize = styled.span``
 const ProductAmountContainer = styled.div`
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; 
+`
+const ProductAmount = styled.span`
+  font-size: 1.5rem;
+  margin: 5px;
+`
+const ProductPrice = styled.span`
+  font-size: 1.8rem;
+  font-weight: 200;
+`
+const Hr = styled.hr`
+  background-color: #eee;
+  border: none;
+  height: 2px;
+  margin: 15px 0;
+`
+
+const Summary = styled.div`
+  flex: 1;
+  border: 1.5px solid #eee;
+  border-radius: 10px;
+  padding: 20px;
+  height: 50vh;
+`
+const SummaryItem = styled.div`
+  margin: 25px 0;
+  display: flex;
+  justify-content: space-between;
+  font-weight: ${props=> props.type === 'total' && '500'};
+  font-size: ${props=> props.type === 'total' && '1.6rem'};
+`
+const SummaryTitle = styled.h1`
+  font-weight: 200;
+`
+const SummaryItemText = styled.span`
 
 `
-const ProductAmount = styled.span``
-const ProductPrice = styled.span``
+const SummaryItemPrice = styled.span`
+
+`
+const Button = styled.button`
+  padding: 10px;
+  width: 100%;
+  font-weight: 600;
+  cursor: pointer;
+  color: #ff00ee;
+  border: 1px solid #ff00ee;
+  background: transparent;
+  transition: all 0.7s ease;
+  &:hover {
+    color: #fff;
+    background-color: #ff00ee;
+  }
+`
+
 const Cart = () => {
   return (
     <>
@@ -131,10 +182,68 @@ const Cart = () => {
                             <ProductPrice>$900</ProductPrice>
                         </PriceDetail>
                      </ProductSee>
+                     <Hr/>
+                     <ProductSee>
+                        <ProductDetail>
+                            <Image src="https://i.pinimg.com/564x/a6/51/02/a651026986996bb1b607d4487c5a5336.jpg"/>
+                            <Details>
+                              <ProductName><b>Product:</b>Thunder Shock Button</ProductName>
+                              <ProductID><b>ID:</b>00000001</ProductID>
+                              <ProductColor color="#ff00ee"/>
+                              <ProductSize><b>Size:</b>XXL</ProductSize>
+                            </Details>
+                        </ProductDetail>
+                        <PriceDetail>
+                            <ProductAmountContainer>
+                              <Add/>
+                              <ProductAmount>2</ProductAmount>
+                              <Remove/>
+                            </ProductAmountContainer>
+                            <ProductPrice>$900</ProductPrice>
+                        </PriceDetail>
+                     </ProductSee>
+                     <Hr/>
+                     <ProductSee>
+                        <ProductDetail>
+                            <Image src="https://i.pinimg.com/564x/a6/51/02/a651026986996bb1b607d4487c5a5336.jpg"/>
+                            <Details>
+                              <ProductName><b>Product:</b>Thunder Shock Button</ProductName>
+                              <ProductID><b>ID:</b>00000001</ProductID>
+                              <ProductColor color="#ff00ee"/>
+                              <ProductSize><b>Size:</b>XXL</ProductSize>
+                            </Details>
+                        </ProductDetail>
+                        <PriceDetail>
+                            <ProductAmountContainer>
+                              <Add/>
+                              <ProductAmount>2</ProductAmount>
+                              <Remove/>
+                            </ProductAmountContainer>
+                            <ProductPrice>$900</ProductPrice>
+                        </PriceDetail>
+                     </ProductSee>
                   </Info>
                   <Summary>
-
+                      <SummaryTitle>Order Summary</SummaryTitle>
+                      <SummaryItem>
+                        <SummaryItemText>Subtotal</SummaryItemText>
+                        <SummaryItemPrice>$ 80</SummaryItemPrice>
+                      </SummaryItem>
+                      <SummaryItem>
+                        <SummaryItemText>Estimated Shipping</SummaryItemText>
+                        <SummaryItemPrice>$ 50</SummaryItemPrice>
+                      </SummaryItem>
+                      <SummaryItem>
+                        <SummaryItemText>Shipping Discount</SummaryItemText>
+                        <SummaryItemPrice>$ -50</SummaryItemPrice>
+                      </SummaryItem>
+                      <SummaryItem type="total">
+                        <SummaryItemText>Total</SummaryItemText>
+                        <SummaryItemPrice>$ 80</SummaryItemPrice>
+                      </SummaryItem>
+                      <Button>Checkout Now</Button>
                   </Summary>
+                  
                 </Bottom>
             </Wrapper>      
         </main>

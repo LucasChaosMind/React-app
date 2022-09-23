@@ -51,9 +51,12 @@ const Input = styled.input`
   border: none;
   padding: 4px;
 `
-const Logo = styled.h1`
+const Logo = styled.a`
   font-weight: bold;
   text-align: center;
+  font-size: 32px;
+  text-decoration: none;
+  color: #000;
 `
 const MenuItem = styled.div`
   font-size: 14px;
@@ -74,7 +77,7 @@ const Navebar = () => {
               </SearchContainer>
           </Left>
           <Center>
-              <Logo>WayCycles</Logo>
+              <Logo href='/'>WayCycles</Logo>
           </Center>
           <Right>
               <MenuItem>Register</MenuItem>
